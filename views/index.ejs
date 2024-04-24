@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Example</title>
+</head>
+
+<body>
+
+    <h1>Welcome to the Prompt Example</h1>
+
+    <p>
+        <!-- Display the message passed from the Express route -->
+        <% if (typeof message !=='undefined' ) { %>
+            <%= message %>
+                <% } else { %>
+                    No message provided.
+                    <% } %>
+    </p>
+
+    <!-- Form to submit a POST request with user input -->
+    <form method="post">
+        <input type="text" name="prompt" placeholder="Enter your prompt">
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
